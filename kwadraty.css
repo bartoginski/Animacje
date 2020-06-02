@@ -1,0 +1,150 @@
+@keyframes slideup {
+	0% {
+		opacity: 0;
+		transform: translateY(-500px);
+		border-radius: 50%;
+	}
+	30% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	100% {
+		transform: rotate(45deg) scaleX(5);
+	}
+}
+
+@keyframes slidedown {
+	0% {
+		opacity: 0;
+		transform: translateY(500px);
+		border-radius: 50%;
+	}
+	30% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	100% {
+		transform: rotate(-45deg) scaleX(5);
+	}
+}
+
+/*kropki*/
+
+@keyframes slide-from-mid1 {
+	0% {
+		opacity: 0;
+		transform: translateY(0);
+		border-radius: 50%;
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(400px);
+		background-color: rgb(30, 155, 47);
+	}
+}
+
+@keyframes slide-from-mid2 {
+	0% {
+		opacity: 0;
+		transform: translateY(0);
+		border-radius: 50%;
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(-400px);
+		background-color: rgb(138, 203, 219);
+	}
+}
+@keyframes slide-from-mid3 {
+	0% {
+		opacity: 0;
+		transform: translateY(0);
+		border-radius: 50%;
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(400px);
+		background-color: rgb(160, 46, 46);
+	}
+}
+@keyframes slide-from-mid4 {
+	0% {
+		opacity: 0;
+		transform: translateY(0);
+		border-radius: 50%;
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(-400px);
+		background-color: rgb(30, 130, 155);
+	}
+}
+
+@keyframes kolor {
+	100% {
+		background-color: green;
+	}
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.box,
+.box2 {
+	width: 100px;
+	height: 100px;
+	background-color: #000;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+.dot1,
+.dot2,
+.dot3,
+.dot4 {
+	width: 50px;
+	height: 50px;
+	background-color: black;
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+}
+
+.dot1 {
+	animation: slide-from-mid1 3s 3s forwards;
+	z-index: 10;
+}
+.dot2 {
+	animation: slide-from-mid2 3s 3s forwards;
+}
+
+.dot3 {
+	animation: slide-from-mid3 3s 3s forwards;
+}
+
+.dot4 {
+	animation: slide-from-mid4 3s 3s forwards;
+}
+
+.box {
+	animation: slideup 3s forwards;
+}
+
+.box2 {
+	animation: slidedown 3s forwards;
+}

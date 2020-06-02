@@ -1,0 +1,36 @@
+@keyframes kolo {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: rotate(180deg);
+	}
+	100% {
+		transform: scale(2);
+		background-color: orange;
+		border-radius: 50%;
+	}
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.click {
+	font-size: 2rem;
+}
+
+.box {
+	height: 200px;
+	width: 200px;
+	background-color: black;
+	margin: 120px;
+	border: 3px solid black;
+}
+
+.click:focus ~ .box {
+	animation: kolo 2s ease forwards;
+}
